@@ -35,4 +35,4 @@ Customer :
     - Beban Barang
 - Cek Status Pengiriman
     - Masukan Kode Resi
-        - Apabila pengiriman akan ada status "Pending"
+        - Apabila pengiriman tertunda akan ada status "Pending"
