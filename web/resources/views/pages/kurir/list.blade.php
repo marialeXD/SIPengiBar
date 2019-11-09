@@ -29,7 +29,7 @@
             </div>
             <div class="card-body">
                 <div class="float-right mb-2">
-                    <a href="{{ route("staff.create") }}" class="btn btn-success">
+                    <a href="{{ route("kurir.create") }}" class="btn btn-success">
                         <i class="fa fa-plus"></i> Tambah</a>
                 </div>
                 <table class="table table-bordered">

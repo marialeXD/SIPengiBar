@@ -15,7 +15,7 @@ class KurirController extends Controller
     public function index()
     {
         $data = Kurir::paginate(10);
-       return view("pages.kurir.list",compact("data"));
+        return view("pages.kurir.list",compact("data"));
     }
 
     /**
@@ -39,12 +39,12 @@ class KurirController extends Controller
         //for save the data
         $request->validate([
             'nama' => 'required|max:50',
-            'alamt' => 'required|max:100',
+            'alamat' => 'required|max:50',
             'telepon' => 'required|max:25',
             'email' => 'required|email|max:50'
         ]);
         
-        Kurir::create($request->except("_token"));
+        Staff::create($request->except("_token"));
 
         $request->session()->flash("info","Berhasil Menambah Data Staff");
         return redirect()->route("kurir.index");
@@ -61,7 +61,7 @@ class KurirController extends Controller
         //for edit the data 
         $data = Kurir::find($id);
 
-       return view("pages.kurir.form",compact("data")); 
+        return view("pages.kurir.form",compact("data"));
     }
 
     /**
@@ -86,7 +86,7 @@ class KurirController extends Controller
     {
         $request->validate([
             'nama' => 'required|max:50',
-            'alamat' => 'required|max:100',
+            'alamat' => 'required|max:50',
             'telepon' => 'required|max:25',
             'email' => 'required|email|max:50'
         ]);
@@ -94,8 +94,8 @@ class KurirController extends Controller
         Staff::where("id",$id)
                 ->update($request->except(["_token","_method"]));
         
-        $request->session()->flash("info","Berhasil Mengubah Data Staff");
-        return redirect()->route("kurir.index"); 
+        $request->session()->flash("info","Berhasil Mengubah Data Kurir");
+        return redirect()->route("kurir.index");
     }
 
     /**
@@ -110,7 +110,6 @@ class KurirController extends Controller
         Staff::destroy($id);
 
         return redirect()->route("kurir.index")
-                ->with("info","Berhasil Menghapus Data Staff"); 
+                ->with("info","Berhasil Menghapus Data Kurir");
     }
 }
-
