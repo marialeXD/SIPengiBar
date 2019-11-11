@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKurirsTable extends Migration
+class CreateWilayahsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateKurirsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tblkurir', function (Blueprint $table) {
-                $table->bigIncrements('id');
+        Schema::create('wilayah', function (Blueprint $table) {
+            $table->bigIncrements('id');
                 $table->string("origin",50);
                 $table->string("destination",50);
                 $table->string("ongkos",50);
@@ -29,6 +29,6 @@ class CreateKurirsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tblkurir');
+        Schema::dropIfExists('tblwilayah');
     }
 }
