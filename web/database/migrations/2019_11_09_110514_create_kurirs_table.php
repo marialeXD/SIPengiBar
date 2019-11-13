@@ -15,9 +15,10 @@ class CreateKurirsTable extends Migration
     {
         Schema::create('tblkurir', function (Blueprint $table) {
                 $table->bigIncrements('id');
-                $table->string("origin",50);
-                $table->string("destination",50);
-                $table->string("ongkos",50);
+                $table->string("nama",50);
+                $table->string("alamat",50);
+                $table->string("telepon",25);
+                $table->string("email",50);
                 $table->timestamps();
         });
     }

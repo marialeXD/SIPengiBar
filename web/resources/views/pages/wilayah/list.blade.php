@@ -29,12 +29,13 @@
             </div>
             <div class="card-body">
                 <div class="float-right mb-2">
-                    <a href="{{ route("kurir.create") }}" class="btn btn-success">
+                    <a href="{{ route("wilayah.form") }}" class="btn btn-success">
                         <i class="fa fa-plus"></i> Tambah Destinasi</a>
                 </div>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
+                            
                             <th>Origin</th>
                             <th>Destination</th>
                             <th>Ongkos</th>
@@ -42,12 +43,10 @@
                         </tr>
                     </thead>
                     <tbody> 
-                        @foreach ($data as $item)
                         <tr>
-                            <td>{{ $loop->iteration + ($data->count()*($data->currentPage()-1)) }}</td>
-                            <td>{{ $item->origin }}</td>
-                            <td>{{ $item->destination}}</td>
-                            <td>{{ $item->ongkos}}</td>
+                            <td>Medan </td>
+                            <td>tebing Tinggi</td>
+                            <td>150000</td>
                             <td><a href="" class="btn btn-warning btn-block"><i class="fa fa-pencil-alt"></i> Rubah</a></td>
                             <td>
                                 <form action="" method="POST">
@@ -59,12 +58,8 @@
                             </td>
                                 </form>
                         </tr>
-                        @endforeach
                     </tbody>
                 </table>
-                <div class="float-right mt-2">
-                    {{ $data->links() }}
-                </div>
             </div>
         </div>
 

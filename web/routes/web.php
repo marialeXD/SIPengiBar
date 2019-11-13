@@ -19,6 +19,8 @@ Route::middleware("auth")->group(function () {
         return view('pages.dashboard');
     })->name("home");
     Route::resource('kurir','KurirController');
+    Route::get('wilayah/list',"WilayahController@wilayahlist")->name("wilayah.list");
+    Route::get('wilayah/form',"WilayahController@wilayahform")->name("wilayah.form");
 });
 
 Route::get("/register",function(){

@@ -17,7 +17,7 @@ class CreateWilayahsTable extends Migration
             $table->bigIncrements('id');
                 $table->string("origin",50);
                 $table->string("destination",50);
-                $table->string("ongkos",50);
+                $table->integer("ongkos");
                 $table->timestamps();
         });
     }

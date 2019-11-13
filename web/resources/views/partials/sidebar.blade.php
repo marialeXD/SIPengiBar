@@ -43,13 +43,12 @@
                         </li>
             </ul>
             <li class="nav-item">
-            <a href="widgets.html" class="nav-link">
+            <a href="{{ route('wilayah.list') }}" class="nav-link">
               <i class="fas fa-map-marked-alt"></i>
               <p>
                  Wilayah
               </p>
             </a>
-          </li>
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
