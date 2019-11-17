@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Kurir;
 
-class KurirController extends Controller
+class StatusController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class KurirController extends Controller
      */
     public function index()
     {
-        $data = Kurir::paginate(10);
-        return view("pages.kurir.list",compact("data"));
+        return view("pages.status.list");
     }
 
     /**
@@ -25,7 +23,7 @@ class KurirController extends Controller
      */
     public function create()
     {
-        return view("pages.kurir.form");
+        //
     }
 
     /**
@@ -36,18 +34,7 @@ class KurirController extends Controller
      */
     public function store(Request $request)
     {
-        //for save the data
-        $request->validate([
-            'nama' => 'required|max:50',
-            'alamat' => 'required|max:50',
-            'telepon' => 'required|max:25',
-            'email' => 'required|email|max:50'
-        ]);
-        
-        Kurir::create($request->except("_token"));
-
-        $request->session()->flash("info","Berhasil Menambah Data Kurir");
-        return redirect()->route("kurir.index");
+        //
     }
 
     /**
@@ -58,10 +45,7 @@ class KurirController extends Controller
      */
     public function show($id)
     {
-        //for edit the data 
-        $data = Kurir::find($id);
-
-        return view("pages.kurir.form",compact("data"));
+        //
     }
 
     /**
@@ -84,18 +68,7 @@ class KurirController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'nama' => 'required|max:50',
-            'alamat' => 'required|max:50',
-            'telepon' => 'required|max:25',
-            'email' => 'required|email|max:50'
-        ]);
-
-        Kurir::where("id",$id)
-                ->update($request->except(["_token","_method"]));
-        
-        $request->session()->flash("info","Berhasil Mengubah Data Kurir");
-        return redirect()->route("kurir.index");
+        //
     }
 
     /**
@@ -106,10 +79,6 @@ class KurirController extends Controller
      */
     public function destroy($id)
     {
-        //for delete the data
-        Kurir::destroy($id);
-
-        return redirect()->route("kurir.index")
-                ->with("info","Berhasil Menghapus Data Kurir");
+        //
     }
 }

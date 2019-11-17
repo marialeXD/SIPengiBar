@@ -19,6 +19,8 @@ Route::middleware("auth")->group(function () {
         return view('pages.dashboard');
     })->name("home");
     Route::resource('kurir','KurirController');
+    Route::resource('transaksi','TransaksiController');
+    Route::resource('status', 'StatusController');
 });
 
 Route::get("/register",function(){

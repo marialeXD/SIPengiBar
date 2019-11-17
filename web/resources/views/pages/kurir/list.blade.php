@@ -48,11 +48,12 @@
                         <tr>
                             <td>{{ $loop->iteration + ($data->count()*($data->currentPage()-1)) }}</td>
                             <td>{{ $item->nama }}</td>
+                            <td>{{ $item->alamat }}</td>
                             <td>{{ $item->telepon }}</td>
                             <td>{{ $item->email}}</td>
-                            <td><a href="" class="btn btn-warning btn-block"><i class="fa fa-pencil-alt"></i> Rubah</a></td>
+                            <td><a href="{{ route("kurir.show",[$item->id]) }}" class="btn btn-warning btn-block"><i class="fa fa-pencil-alt"></i> Rubah</a></td>
                             <td>
-                                <form action="" method="POST">
+                                <form action="{{ route("kurir.destroy",[$item->id]) }}" method="POST">
                                     @method("delete")
                                     @csrf
                                     <button type="submit" class="btn btn-danger btn-block">
