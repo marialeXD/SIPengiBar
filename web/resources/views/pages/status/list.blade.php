@@ -24,17 +24,20 @@
             </div>
             <div class="card-body">
                 <div class="float-right mb-2">
-                    <a href="" class="btn btn-success">
+                    <a href="{{ route("status.create") }}" class="btn btn-success">
                         <i class="fa fa-plus"></i> Tambah</a>
                 </div>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
                             <th>No.</th>
+                            <th>Nama Pengirim</th>
+                            <th>Alamat Pengirim</th>
+                            <th>Origin</th>
                             <th>Nama Barang</th>
                             <th>Nama Penerima</th>
                             <th>Alamat Penerima</th>
-                            <th>Kota</th>
+                            <th>Destination</th>
                             <th>Status</th>
                             <th colspan=2>Action</th>
                         </tr>
@@ -43,10 +46,13 @@
         
                         <tr>
                             <td>1.</td>
+                            <td>Kristin</td>
+                            <td>Jl. Gelas no.50</td>
+                            <td>Medan</td>
                             <td>Softcase Handphone</td>
                             <td>Feni</td>
                             <td>Jl. Pisang no.8A</td>
-                            <td>Medan</td>
+                            <td>Jakarta</td>
                             <td>Pending...</td>
                             <td><a href="" class="btn btn-warning btn-block"><i class="fa fa-pencil-alt"></i> Update</a></td>
                                 </form>

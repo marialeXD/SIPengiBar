@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class StatusController extends Controller
+class BarangController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class StatusController extends Controller
      */
     public function index()
     {
-        return view("pages.status.list");
+        return view("pages.barang.list");
     }
 
     /**
@@ -23,7 +23,7 @@ class StatusController extends Controller
      */
     public function create()
     {
-        return view("pages.status.form");
+        return view("pages.barang.form");
     }
 
     /**
