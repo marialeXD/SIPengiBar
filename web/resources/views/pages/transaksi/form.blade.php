@@ -103,6 +103,12 @@
                             class="form-control"
                             name="email">
                     </div>
+                    <div class="form-group">
+                        <label for="total"><h2>Total (Rp)</h2></label>
+                        <input type="text"
+                            class="form-control"
+                            name="total">
+                    </div>
                     <div class="form-group float-right">
                         <button type="submit" class="btn btn-success">
                             <i class="fa fa-save"></i> Simpan

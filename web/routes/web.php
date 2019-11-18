@@ -18,6 +18,9 @@ Route::middleware("auth")->group(function () {
     Route::get('/home', function(){
         return view('pages.dashboard');
     })->name("home");
+    Route::get('/status/form', function(){
+        return view('pages.status.form');
+    })->name("status.form");
     Route::resource('kurir','KurirController');
 
     Route::resource('transaksi','TransaksiController');

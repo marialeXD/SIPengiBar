@@ -36,14 +36,21 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route("transaksi.index") }}" class="nav-link">
+                            <a href="{{ route("transaksi.create") }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Transaksi Baru</p>
                             </a>
                         </li>
             </ul>
             <li class="nav-item">
-            <a href="{{ route('wilayah.list') }}" class="nav-link">
+            <a href="{{ route("transaksi.index") }}" class="nav-link">
+            <i class="far fa-credit-card"></i>
+              <p>
+                 Riwayat Transaksi
+              </p>
+            </a>
+            <li class="nav-item">
+            <a href="{{ route("wilayah.list") }}" class="nav-link">
               <i class="fas fa-map-marked-alt"></i>
               <p>
                  Wilayah

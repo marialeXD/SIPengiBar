@@ -13,7 +13,7 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        return view("pages.transaksi.form");
+        return view("pages.transaksi.list");
     }
 
     /**
@@ -23,7 +23,7 @@ class TransaksiController extends Controller
      */
     public function create()
     {
-        //
+        return view("pages.transaksi.form");
     }
 
     /**

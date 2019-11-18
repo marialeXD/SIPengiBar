@@ -89,12 +89,13 @@
                             <option value="gateaway">RECEIVED AT ORIGIN GATEAWAY</option>
                             <option value="warehouse">RECEIVED AT WAREHOUSE</option>
                             <option value="deliv">WITH DELIVERY COURIER</option>
-                            <option value="done">DELIVERED</option>
+                            <option value="done">DELIVERED</option></select>
                     </div>
                     <div class="form-group float-right">
-                        <button type="submit" class="btn btn-success">
-                            <i class="fa fa-save"></i> Simpan
-                        </button>
+                        
+                        <a href="" class="btn btn-success">
+                        <i class="fa fa-save"></i> Simpan
+                        </a>
                         <a href="" class="btn btn-danger">
                             <i class="fa fa-arrow-left"></i> Batal
                         </a>
