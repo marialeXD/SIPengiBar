@@ -23,7 +23,7 @@ class StatusController extends Controller
      */
     public function create()
     {
-        //
+        return view("pages.status.form");
     }
 
     /**
@@ -68,7 +68,7 @@ class StatusController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**

@@ -1,18 +1,18 @@
 @extends('main')
 
-@section('title','Form Wilayah')
+@section('title','Form Jenis Barang')
 
 @section('content')
 <div class="content-wrapper">
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
-                <div class="col-6"><h1>Wilayah</h1></div>
+                <div class="col-6"><h1>Tambah Jenis Barang</h1></div>
                 <div class="col-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ route("home") }}">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route("wilayah.list") }}">List Wilayah</a></li>
-                        <li class="breadcrumb-item active">Form Wilayah</li>
+                        <li class="breadcrumb-item"><a href="{{ route("barang.index") }}">List Jenis Barang</a></li>
+                        <li class="breadcrumb-item active">Form Jenis Barang</li>
                     </ol>
                 </div>
             </div>
@@ -21,7 +21,7 @@
     <div class="content">
         <div class="card">
             <div class="card-header bg-primary text-white">
-                <h3 class="card-title">Form Wilayah</h3>
+                <h3 class="card-title">Form Jenis Barang</h3>
             </div>
             <div class="card-body">
                 <form action=''
@@ -31,7 +31,7 @@
                         @method("PUT")
                     @endif -->
                     <div class="form-group">
-                        <label for="origin">Origin</label>
+                        <label for="jenis">Jenis Barang</label>
                         <input type="text"
                             class="form-control"
                             name="origin" value=''}>
@@ -40,28 +40,6 @@
                                 {{ $message }}
                             </div>
                         @enderror  -->
-                    </div>
-                    <div class="form-group">
-                        <label for="destination">Destination</label>
-                        <input type="text"
-                            class="form-control "
-                            name="destination" value=''>
-                        <!-- @error("destination")
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror -->
-                    </div>
-                    <div class="form-group">
-                        <label for="ongkos">Ongkos (Rp/Kg)</label>
-                        <input type="text"
-                            class="form-control "
-                            name="ongkos" value="">
-                        <!-- @error("ongkos")
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror -->
                     </div>
                     <div class="form-group float-right">
                         <button type="submit" class="btn btn-success">
