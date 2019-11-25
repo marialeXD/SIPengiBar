@@ -1,10 +1,12 @@
 # Sistem Informasi Pengiriman Barang (SIPengiBar)
 
+## ERD
+![ERD Relationship] (erd-Relationship.png)
+
 ## User
 - Admin
 - Customer
 
-Simaria pelupa
 
 ## Web
 Admin :
