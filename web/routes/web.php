@@ -1,4 +1,5 @@
 <?php
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -9,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
     return view('pages.login');
 });
@@ -25,9 +27,16 @@ Route::middleware("auth")->group(function () {
 
     Route::resource('transaksi','TransaksiController');
     Route::resource('status', 'StatusController');
+<<<<<<< HEAD
+
+    Route::get('wilayah/list',"WilayahController@wilayahlist")->name("wilayah.list");
+    Route::get('wilayah/form',"WilayahController@wilayahform")->name("wilayah.form");
+
+=======
     Route::resource('barang', 'BarangController');
     Route::get('wilayah/list',"WilayahController@wilayahlist")->name("wilayah.list");
     Route::get('wilayah/form',"WilayahController@wilayahform")->name("wilayah.form");
+>>>>>>> ab8a6fd96743be5a3d6a963879570e5c6220cc23
 });
 
 Route::get("/register",function(){
