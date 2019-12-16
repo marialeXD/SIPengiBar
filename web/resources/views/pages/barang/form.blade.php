@@ -27,19 +27,19 @@
                 <form action=''
                     method="POST" autocomplete="off">
                     @csrf
-                    <!-- @if (isset($data))
+                    @if (isset($data))
                         @method("PUT")
-                    @endif -->
+                    @endif
                     <div class="form-group">
                         <label for="jenis">Jenis Barang</label>
                         <input type="text"
                             class="form-control"
-                            name="origin" value=''}>
-                         <!-- @error("origin")
+                            name="jenis" value=''}>
+                         @error("jenis")
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>
-                        @enderror  -->
+                        @enderror  
                     </div>
                     <div class="form-group float-right">
                         <button type="submit" class="btn btn-success">

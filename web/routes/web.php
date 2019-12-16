@@ -20,23 +20,28 @@ Route::middleware("auth")->group(function () {
     Route::get('/home', function(){
         return view('pages.dashboard');
     })->name("home");
+    
+    Route::get('/user','UserController@index')
+        ->name("user");
+    Route::post("/user/simpan",'UserController@simpan')
+        ->name("user.update");
+
     Route::get('/status/form', function(){
         return view('pages.status.form');
     })->name("status.form");
+
     Route::resource('kurir','KurirController');
 
     Route::resource('transaksi','TransaksiController');
     Route::resource('status', 'StatusController');
-<<<<<<< HEAD
 
     Route::get('wilayah/list',"WilayahController@wilayahlist")->name("wilayah.list");
     Route::get('wilayah/form',"WilayahController@wilayahform")->name("wilayah.form");
 
-=======
     Route::resource('barang', 'BarangController');
     Route::get('wilayah/list',"WilayahController@wilayahlist")->name("wilayah.list");
     Route::get('wilayah/form',"WilayahController@wilayahform")->name("wilayah.form");
->>>>>>> ab8a6fd96743be5a3d6a963879570e5c6220cc23
+
 });
 
 Route::get("/register",function(){

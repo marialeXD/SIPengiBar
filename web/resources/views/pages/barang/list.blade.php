@@ -54,19 +54,6 @@
                             </td>
                                 </form>
                         </tr>
-                        <tr>
-                            <td>Pecah Belah</td>
-                            <td><a href="" class="btn btn-warning btn-block"><i class="fa fa-pencil-alt"></i> Rubah</a></td>
-                            <td>
-                                <form action="" method="POST">
-                                    @method("delete")
-                                    @csrf
-                                    <button type="submit" class="btn btn-danger btn-block">
-                                        <i class="fa fa-trash"></i> Hapus
-                                    </button>
-                            </td>
-                                </form>
-                        </tr>
                     </tbody>
                 </table>
             </div>
