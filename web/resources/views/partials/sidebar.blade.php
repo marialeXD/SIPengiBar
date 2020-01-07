@@ -50,7 +50,7 @@
               </p>
             </a>
             <li class="nav-item">
-            <a href="{{ route("wilayah.list") }}" class="nav-link">
+            <a href="{{ route("wilayah.index") }}" class="nav-link">
               <i class="fas fa-map-marked-alt"></i>
               <p>
                  Wilayah

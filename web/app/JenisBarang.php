@@ -8,5 +8,5 @@ class JenisBarang extends Model
 {
     //
     protected $table = "tblbarang";
-    protected $fillable = ['barang'];
+    protected $fillable = ['jenis'];
 }

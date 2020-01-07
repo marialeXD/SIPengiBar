@@ -29,27 +29,29 @@
             </div>
             <div class="card-body">
                 <div class="float-right mb-2">
-                    <a href="{{ route("wilayah.form") }}" class="btn btn-success">
+                    <a href="{{ route("wilayah.create") }}" class="btn btn-success">
                         <i class="fa fa-plus"></i> Tambah Destinasi</a>
                 </div>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            
+                            <th>No. </th>
                             <th>Origin</th>
                             <th>Destination</th>
-                            <th>Ongkos</th>
+                            <th>Ongkos (Rp)</th>
                             <th colspan=2>Action</th>
                         </tr>
                     </thead>
                     <tbody> 
+                        @foreach ($data as $item)
                         <tr>
-                            <td>Medan </td>
-                            <td>Jakarta</td>
-                            <td>30.000;</td>
-                            <td><a href="" class="btn btn-warning btn-block"><i class="fa fa-pencil-alt"></i> Rubah</a></td>
+                            <td>{{ $loop->iteration + ($data->count()*($data->currentPage()-1)) }}</td>
+                            <td>{{ $item->origin }}</td>
+                            <td>{{ $item->destination }}</td>
+                            <td>{{ $item->ongkos }}</td>
+                            <td><a href="{{ route("wilayah.show",[$item->id]) }}" class="btn btn-warning btn-block"><i class="fa fa-pencil-alt"></i> Rubah</a></td>
                             <td>
-                                <form action="" method="POST">
+                            <form action="{{ route("wilayah.destroy",[$item->id])}}" method="POST">
                                     @method("delete")
                                     @csrf
                                     <button type="submit" class="btn btn-danger btn-block">
@@ -58,8 +60,12 @@
                             </td>
                                 </form>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
+                <div class="float-right mt-2">
+                    {{ $data->links() }}
+                </div>
             </div>
         </div>
 

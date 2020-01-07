@@ -24,7 +24,9 @@
                 <h3 class="card-title">Form Jenis Barang</h3>
             </div>
             <div class="card-body">
-                <form action=''
+                <form action='{{ isset($data)
+                                 ?route("barang.update",[$data->id])
+                                 :route("barang.store") }}'
                     method="POST" autocomplete="off">
                     @csrf
                     @if (isset($data))
@@ -45,7 +47,7 @@
                         <button type="submit" class="btn btn-success">
                             <i class="fa fa-save"></i> Simpan
                         </button>
-                        <a href="" class="btn btn-danger">
+                    <a href="{{ route("barang.index") }}" class="btn btn-danger">
                             <i class="fa fa-arrow-left"></i> Batal
                         </a>
                     </div>

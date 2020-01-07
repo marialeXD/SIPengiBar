@@ -38,7 +38,7 @@ class BarangController extends Controller
     {
         //
         $request->validate([
-            'barang' => 'required|max:50'
+            'jenis' => 'required|max:50'
         ]);
         JenisBarang::create($request->except("_token"));
         
@@ -82,7 +82,7 @@ class BarangController extends Controller
     {
         //
         $request->validate([
-            'barang' => 'required|max:50'
+            'jenis' => 'required|max:50'
         ]);
 
         JenisBarang::where("id",$id)

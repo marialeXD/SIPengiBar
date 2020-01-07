@@ -35,27 +35,34 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            
+                            <th>No. </th>
                             <th>Jenis Barang</th>
                             <th colspan=2>Action</th>
                         </tr>
                     </thead>
                     <tbody> 
                         <tr>
-                            <td>Kosmetik</td>
-                            <td><a href="" class="btn btn-warning btn-block"><i class="fa fa-pencil-alt"></i> Rubah</a></td>
+                            @foreach ($data as $item)
+                            <td>{{ $loop->iteration + (10*($data->currentPage()-1)) }}</td>
+                            <td>{{ $item->jenis }}</td>
+                        <td><a href="{{ route("barang.show",[$item->id])}}" class="btn btn-warning btn-block"><i class="fa fa-pencil-alt"></i> Rubah</a></td>
                             <td>
-                                <form action="" method="POST">
+                            <form action="{{route("barang.destroy",[$item->id])}}" method="PUT">
                                     @method("delete")
                                     @csrf
                                     <button type="submit" class="btn btn-danger btn-block">
                                         <i class="fa fa-trash"></i> Hapus
                                     </button>
-                            </td>
                                 </form>
+                            </td>
+                                
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
+                <div class="float-right mt-2">
+                    {{ $data->links() }}
+                </div>
             </div>
         </div>
 

@@ -35,12 +35,9 @@ Route::middleware("auth")->group(function () {
     Route::resource('transaksi','TransaksiController');
     Route::resource('status', 'StatusController');
 
-    Route::get('wilayah/list',"WilayahController@wilayahlist")->name("wilayah.list");
-    Route::get('wilayah/form',"WilayahController@wilayahform")->name("wilayah.form");
-
+    Route::resource('wilayah',"WilayahController");
     Route::resource('barang', 'BarangController');
-    Route::get('wilayah/list',"WilayahController@wilayahlist")->name("wilayah.list");
-    Route::get('wilayah/form',"WilayahController@wilayahform")->name("wilayah.form");
+  
 
 });
 
