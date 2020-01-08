@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <!-- <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"> -->
+        <link rel="stylesheet" href="css/simonika.min.css">
+        <link rel="stylesheet" href="css/jquery.mobile.icons.min.css">
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
+        <title>SIPengiBar Mobile</title>
+    </head>
+    <body>
+            <div data-role="page" id="login">
+                <div data-role="header">
+                    <h1>Login Kurir SIPengiBar</h1> </div>
+                <div role="main" class="ui-content">
+                    <div class="ui-field-contain">
+                        <label for="email">Email</label>
+                        <input type="email" name="email"
+                            placeholder="Masukkan Email Kurir">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="password">Password</label>
+                        <input type="password" name="password"
+                            placeholder="Masukkan Password Kurir">
+                    </div>
+                    <a href="#listkerja" class="ui-btn">Login</a>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h3>STMIK IBBI</h3>
+        </div>
+    </div>
+        <div data-role="page" id="listkerja">
+            <div data-role="panel" id="menupanel"
+                data-position="left" data-display="overlay">
+                <ul data-role="listview">
+                    <li><h1>Hallo, Kurir!</h1></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#password">Ganti Password</a></li>
+                    <li><a href="#login">Logout</a></li>
+                </ul> 
+            </div>
+            <div data-role="header">
+                <a href="#menupanel" class="ui-btn-left
+                    ui-btn ui-btn-inline 
+                    ui-corner-all ui-icon-bars 
+                    ui-btn-icon-left">Menu</a>
+                <h1>List Barang</h1>
+                <a href="#login" class="ui-btn-right
+                    ui-btn ui-btn-inline
+                    ui-corner-all ui-icon-power
+                    ui-btn-icon-right">Logout</a> 
+            </div>
+            <div class="ui-content">
+                <ul data-role="listview"
+                    data-filter="true"
+                    data-filter-placeholder="Search..."
+                    data-inset="true">
+                    <li><a href="#detailkerja">
+                        <h2>1234567890</h2>
+                        <p>Casing Handphone</p>
+                        <p>MEDAN - JAKARTA</p>
+                        <span class="ui-li-count">Pending...</span>
+                    </a></li>
+                    <li><a href="#detailkerja">
+                        <h2>1234567980</h2>
+                        <p>Document</p>
+                        <p>MEDAN - BANDUNG</p>
+                        <span class="ui-li-count">Received</span>
+                    </a></li>
+                    <li><a href="#detailkerja">
+                        <h2>1234568970</h2>
+                        <p>Pakaian</p>
+                        <p>MEDAN - BATAM</p>
+                        <span class="ui-li-count">Recieved</span>
+                    </a></li>
+                </ul>
+            </div>
+            <div data-role="footer"
+                data-position="fixed">
+                <h3>STMIK IBBI</h3>
+            </div>
+        </div>
+
+        <div data-role="page" id="cekbarang">
+            <div data-role="header">
+                <a href=" " class="ui-btn-left
+                    ui-btn ui-btn-inline  
+                    ui-btn-icon-left">Back</a>
+                <h1>List Barang</h1>
+            </div>
+            <div class="ui-content">
+                <ul data-role="listview"
+                    data-filter="false"
+                    data-filter-placeholder="cari kerja"
+                    data-inset="true">
+                    <li><a href="#detailbarang">
+                        <h2>1234567890</h2>
+                        <p>Casing Handphone</p>
+                        <p>MEDAN - JAKARTA</p>
+                        <span class="ui-li-count">Sedang dikirim...</span>
+                    </a></li>
+                </ul>
+            </div>
+            <div data-role="footer"
+                data-position="fixed">
+                <h3>STMIK IBBI</h3>
+            </div>
+        </div>
+        <div data-role="page" id="cekongkir">
+            <div data-role="header">
+                <a href=" " class="ui-btn-left
+                ui-btn ui-btn-inline 
+                ui-corner-all 
+                ui-btn-icon-left">Back</a><h1>Check Tarif Kirim</h1> </div>
+            <div role="main" class="ui-content">
+                <div class="ui-field-contain">
+                    <label for="origin">Origin</label>
+                    <input type="text" name="origin" id="origin"
+                        class="form-control" readonly 
+                        value="MEDAN">
+                </div>
+                <div class="ui-field-contain">
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <select name="destination" class="form-control">
+                            <option value="jkt">JAKARTA</option>
+                            <option value="mlg">MALANG</option>
+                            <option value="bdg">BANDUNG</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="beban"> Berat Beban (Kg)</label>
+                    <input type="text" name="beban"
+                        placeholder=" ">
+                </div>
+                <a href="#detailongkir" class="ui-btn">Cek Ongkir</a>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h3>STMIK IBBI</h3>
+    </div>
+</div>
+        <div data-role="page" id="profile">
+            <div data-role="header">
+                <a href="" data-rel="back">Back</a>
+                <h1>Profile</h1>
+            </div>
+            <div class="ui-content">
+                <div class="ui-field-contain">
+                    <label for="nama">Nama</label>
+                    <input type="text" name="nama">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="notelp">Nomor Telp</label>
+                    <input type="text" name="notelp">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h3>STMIK IBBI</h3>
+            </div>
+        </div>
+         <div data-role="page" id="detailkerja">
+            <div data-role="header">
+                <a href="" data-rel="back">Back</a>
+                <h1>Detail Kerja</h1>
+                <a href="#listkerja" class="ui-btn-right
+                    ui-btn ui-btn-inline
+                    ui-corner-all">Update</a>
+            </div>
+            <div class="ui-content">
+                <div class="ui-field-contain">
+                    <label for="nbarang">Nama Barang</label>
+                    <input type="text" name="nbarang">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="jenis">Jenis Barang</label>
+                    <input type="text" name="jenis">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="namapeng">Nama Pengirim</label>
+                    <input type="text" name="namapeng">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="tglkrm">Tanggal Kirim</label>
+                    <input type="text" name="tglkrm">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="alamatpeng">Alamat Pengirim</label>
+                    <input type="text" name="alamatpeng">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="kotapeng">Kota Pengirim</label>
+                    <input type="text" name="kotapeng">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="namapen">Nama Penerima</label>
+                    <input type="text" name="namapen">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="alamatpen">Alamat Penerima</label>
+                    <input type="text" name="alamatpen">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="kotapen">Kota Penerima</label>
+                    <input type="text" name="kotapen">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="total">Total Harga (Rp)</label>
+                    <textarea name="total" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="ui-field-contain">
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select name="destination" class="form-control">
+                            <option value="pen">Pending...</option>
+                            <option value="recieved">Barang telah diterima oleh agen</option>
+                            <option value="sorting">Barang telah diterima oleh pusat sorting</option>
+                            <option value="warehouse">Barang telah diterima di gudang Origin</option>
+                            <option value="withdeliv">Barang sedang dikirim ke alamat yang dituju</option>
+                            <option value="delivered">Recieved</option>
+                        </select>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h3>STMIK IBBI</h3>
+            </div>
+        </div>
+            <div data-role="footer" data-position="fixed">
+                <h3>STMIK IBBI</h3>
+            </div>
+        </div>
+        <div data-role="page" id="password">
+            <div data-role="header">
+                <a href="" data-rel="back">Back</a>
+                <h1>Ganti Password</h1>
+            </div>
+            <div class="ui-content">
+                <div class="ui-field-contain">
+                    <label for="passwordlama">Password Lama</label>
+                    <input type="password" name="passwordlama">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="passwordbaru">Password Baru</label>
+                    <input type="password" name="passwordbaru">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="konfirmpassword">Konfirm Password</label>
+                    <input type="password" name="konfirmpassword" >
+                </div>
+                <button class="ui-btn">Simpan</button>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h3>STMIK IBBI</h3>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    </body>
+</html>

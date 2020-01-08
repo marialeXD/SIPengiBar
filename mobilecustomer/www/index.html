@@ -40,17 +40,14 @@
     </head>
     <body>
         <div data-role="page" id="login">
-            <div data-role="header"><h1>Sistem Pengiriman Barang</h1>
-                <a href="#loginform" class="ui-btn-right
-                ui-btn ui-btn-inline
-                ui-corner-all ui-icon-power
-                ui-btn-icon-right">Login</a> </div>
+            <div data-role="header"><h1>SIPengiBar</h1>
+            </div>
             <div role="main" class="ui-content">
                 <div class="ui-field-contain">
                    
                     <label for="text">No. Resi</label>
-                    <input type="text" name="no.resi"
-                        placeholder="masukkan nomor resi">
+                    <input type="text" name="noresi"
+                        placeholder="Masukkan No Resi">
                 </div>
                 <a href="#cekbarang" class="ui-btn">Cek Barang</a>
                  <a href="#cekongkir" class="ui-btn">Cek Ongkir</a>
@@ -59,73 +56,10 @@
                 <h3>STMIK IBBI</h3>
             </div>
         </div>
-            <div data-role="page" id="loginform">
-               
-                <div data-role="header">
-                    <a href=" " class="ui-btn-left
-                    ui-btn ui-btn-inline 
-                    ui-corner-all 
-                    ui-btn-icon-left">Back</a><h1>Login Admin SIPengiBar</h1> </div>
-                <div role="main" class="ui-content">
-                    <div class="ui-field-contain">
-                        <label for="email">Email</label>
-                        <input type="email" name="email"
-                            placeholder="masukkan email staff">
-                    </div>
-                    <div class="ui-field-contain">
-                        <label for="password">Password</label>
-                        <input type="password" name="password"
-                            placeholder="masukkan password staff">
-                    </div>
-                    <a href="#listkerja" class="ui-btn">Login</a>
-        </div>
-        <div data-role="footer" data-position="fixed">
-            <h3>STMIK IBBI</h3>
-        </div>
-    </div>
-        <div data-role="page" id="listkerja">
-            <div data-role="panel" id="menupanel"
-                data-position="left" data-display="overlay">
-                <ul data-role="listview">
-                    <li><h1>Menu</h1></li>
-                    <li><a href="#profile">Profile</a></li>
-                    <li><a href="#password">Ganti Password</a></li>
-                    <li><a href="#login">Logout</a></li>
-                </ul> 
-            </div>
-            <div data-role="header">
-                <a href="#menupanel" class="ui-btn-left
-                    ui-btn ui-btn-inline 
-                    ui-corner-all ui-icon-bars 
-                    ui-btn-icon-left">Menu</a>
-                <h1>List Barang</h1>
-                <a href="#login" class="ui-btn-right
-                    ui-btn ui-btn-inline
-                    ui-corner-all ui-icon-power
-                    ui-btn-icon-right">Logout</a> 
-            </div>
-            <div class="ui-content">
-                <ul data-role="listview"
-                    data-filter="true"
-                    data-filter-placeholder="cari kerja"
-                    data-inset="true">
-                    <li><a href="#detailkerja">
-                        <h2>1234567890</h2>
-                        <p>Casing Handphone</p>
-                        <p>Medan - Jakarta</p>
-                        <span class="ui-li-count">Pending</span>
-                    </a></li>
-                </ul>
-            </div>
-            <div data-role="footer"
-                data-position="fixed">
-                <h3>STMIK IBBI</h3>
-            </div>
-        </div>
 
         <div data-role="page" id="cekbarang">
             <div data-role="header">
-                <a href="#menupanel" class="ui-btn-left
+                <a href=" " class="ui-btn-left
                     ui-btn ui-btn-inline  
                     ui-btn-icon-left">Back</a>
                 <h1>List Barang</h1>
@@ -137,9 +71,9 @@
                     data-inset="true">
                     <li><a href="#detailbarang">
                         <h2>1234567890</h2>
-                        <p>Casing Handphone</p>
-                        <p>Medan - Jakarta</p>
-                        <span class="ui-li-count">Pending</span>
+                        <h2>Casing Handphone</h2>
+                        <p>MEDAN - JAKARTA</p>
+                        <span class="ui-li-count">Barang sedang dikirim...</span>
                     </a></li>
                 </ul>
             </div>
@@ -149,40 +83,43 @@
             </div>
         </div>
         <div data-role="page" id="cekongkir">
-            <div data-role="panel" id="menupanel"
-                data-position="left" data-display="overlay">
-            </div>
             <div data-role="header">
-                <h1>List Ongkos Kirim</h1>
-                <a href="#login" class="ui-btn-right
-                    ui-btn ui-btn-inline
-                    ui-btn-icon-right">Back</a> 
-            </div>
-            <div class="ui-content">
-                <ul data-role="listview"
-                    data-filter="true"
-                    data-filter-placeholder="Cari Kota"
-                    data-inset="true">
-                    <li><a href="#detailongkir">
-                        <h2>Medan - Jakarta</h2>
-                        <p>Rp 30.000/Kg;</p>
-                    </a></li>
-                    <li><a href="#detailongkir">
-                        <h2>Medan - Bandung</h2>
-                        <p>Rp 35.000/Kg;</p>
-                    </a></li>
-                    <li><a href="#detailongkir">
-                        <h2>Medan - Bali</h2>
-                        <p>Rp 40.000/Kg;</p>
-                    </a></li>
-                </ul>
-            </div>
-            <div data-role="footer"
-                data-position="fixed">
-                <h3>STMIK IBBI</h3>
-            </div>
-        </div>
-        <div data-role="page" id="profile">
+                <a href=" " class="ui-btn-left
+                ui-btn ui-btn-inline 
+                ui-corner-all 
+                ui-btn-icon-left">Back</a><h1>Check Tarif Kirim</h1> </div>
+            <div role="main" class="ui-content">
+                <div class="form-group">
+                    <label for="origin">Origin</label>
+                    <select name="destination" class="form-control" readonly>
+                        <option value="mdn">MEDAN</option>
+                    </select>
+                </div>
+                </div>
+                <div role="main" class="ui-content">
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <select name="destination" class="form-control">
+                            <option value="jkt">JAKARTA</option>
+                            <option value="mlg">MALANG</option>
+                            <option value="bdg">BANDUNG</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ui-content">
+                    <label for="beban"> Berat Beban (Kg)</label>
+                    <input type="text" name="beban"
+                        placeholder="Min. 1 Kg">
+                </div>
+                <div class="ui-content">
+                <a href="#detailongkir" class="ui-btn">Cek Ongkir</a>
+                </div>
+                <div data-role="footer" data-position="fixed">
+                    <h3>STMIK IBBI</h3>
+                </div>
+    </div>
+  
+        <!-- <div data-role="page" id="profile">
             <div data-role="header">
                 <a href="" data-rel="back">Back</a>
                 <h1>Profile</h1>
@@ -204,8 +141,9 @@
             <div data-role="footer" data-position="fixed">
                 <h3>STMIK IBBI</h3>
             </div>
-        </div>
-         <div data-role="page" id="detailkerja">
+        </div> -->
+        
+        <div data-role="page" id="detailkerja">
             <div data-role="header">
                 <a href="" data-rel="back">Back</a>
                 <h1>Detail Kerja</h1>
@@ -311,13 +249,64 @@
                     <label for="total">Total Harga (Rp)</label>
                     <textarea name="total" id="" cols="30" rows="10"></textarea>
                 </div>
-
+                <div class="ui-field contain">
+                    <label for="history">History</label>
+                </div>
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <h2>1234567890</h2>
+                        <h3>Case Handphone</h3>
+                        <span class="ui-li-count">09/12/2019</span>
+                        <p>Paket Sudah diterima oleh agen</p>
+                    </li>
+                    <li>
+                        <h2>1234567890</h2>
+                        <h3>Case Handphone</h3>
+                        <span class="ui-li-count">10/12/2019</span>
+                        <p>Barang telah diterima oleh pusat sortir</p>
+                    </li>
+                    <li>
+                        <h2>1234567890</h2>
+                        <h3>Case Handphone</h3>
+                        <span class="ui-li-count">12/12/2019</span>
+                        <p>Barang sudah diterima di Origin</p>
+                    </li>
+                    <li>
+                        <h2>1234567890</h2>
+                        <h3>Case Handphone</h3>
+                        <span class="ui-li-count">03/12/2019</span>
+                        <p>Barang sedang dikirim ke alamat</p>
+                    </li>
+                </ul>
             </div>
             <div data-role="footer" data-position="fixed">
                 <h3>STMIK IBBI</h3>
             </div>
         </div>
-
+        <div data-role="page" id="detailongkir">
+            <div data-role="header">
+                <h1>Check Tarif Kirim</h1>
+                <a href="#login" class="ui-btn-right
+                    ui-btn ui-btn-inline
+                    ui-corner-all">Selesai</a>
+            </div>
+            <div class="ui-content">
+                <div class="ui-field contain">
+                    <label for="detail">Detail</label>
+                </div>
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <h2>MEDAN - JAKARTA</h2>
+                        <h1>Rp 30.000</h1>
+                        <span class="ui-li-count">Document/Paket</span>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h3>STMIK IBBI</h3>
+            </div>
+        </div>
+          
         <div data-role="page" id="password">
             <div data-role="header">
                 <a href="" data-rel="back">Back</a>
